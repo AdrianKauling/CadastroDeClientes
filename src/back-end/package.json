@@ -1,0 +1,21 @@
+{
+  "name": "cadastro_de_clientes",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/Adriankauling/CadastroDeClientes.git",
+  "author": "Adrian Kauling",
+  "license": "MIT",
+  "private": "false",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.12.0-beta.2",
+    "sequelize-cli": "^6.3.0"
+  }
+}
