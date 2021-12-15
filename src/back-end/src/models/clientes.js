@@ -6,6 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
     }
   };
+
+  
   clientes.init({
     cpf: DataTypes.BIGINT,
     nome: DataTypes.STRING,
