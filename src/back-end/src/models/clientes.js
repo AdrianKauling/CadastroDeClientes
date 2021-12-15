@@ -1,21 +1,37 @@
-'use strict';
-const { Model } = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class clientes extends Model {
-   
-    static associate(models) {
-    }
-  };
 
-  
-  clientes.init({
-    cpf: DataTypes.BIGINT,
-    nome: DataTypes.STRING,
-    dtNasc: DataTypes.DATE,
-    sexo: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'clientes',
-  });
-  return clientes;
-};
+const { Model } = require('sequelize')
+module.exports = (DataTypes, connection) => {
+
+class Clientes extends Model {}
+
+Clientes.init({
+    cpf: {
+        type: DataTypes.BIGINT
+    },
+    nome: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    dtNasc: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    sexo: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    profissao: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
+}, {
+    sequelize: connection,
+    freezeTableName: true
+})
+
+return Clientes
+}
