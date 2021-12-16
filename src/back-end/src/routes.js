@@ -1,9 +1,8 @@
-const Express = require('express')
-const router = Express.Router()
+const router = require('express').Router()
 
 const { Clientes } = require('./models/')
-
-
+const ServiceCliente = require('./controller/servicecliente')
+const serviceCliente = new ServiceCliente(Clientes)
 
 router.get('/',(req,res) => {
     console.log(req)
@@ -12,36 +11,25 @@ router.get('/',(req,res) => {
 
 
 
-router.post('/cadastro',async (req,res) => {
-    console.log(req)
-    const body = req.body
-    await Clientes.create(body)
-    res.json(body)
+router.post('/cadastro', (req,res) => {
+    serviceCliente.adicionarCliente(req,res)
 })
 
-
-
 router.get('/cadastro', (req,res) => {
-    res.json()
+    serviceCliente.getAll(res)
 })
 
 
 
 router.get('/cadastro/:id', (req,res) => {
-    const id = req.params.id
-    res.json
+    serviceCliente.getOne(req,res)
 })
 
 router.put('/cadastro/:id', (req,res)=> {
-    const id = req.params.id
-    
-    res.json()
+    serviceCliente.editar(req,res)
 })
-
 router.delete('/cadastro/:id', (req,res) => {
-    const id = req.params.id
-
-    res.json()
+    serviceCliente.delete(req,res)
 })
 
 module.exports = router
