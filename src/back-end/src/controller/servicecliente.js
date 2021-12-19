@@ -2,37 +2,41 @@ class ServiceCliente {
     constructor(model) {
         this.cliente = model
     }
-    async adicionarCliente(req,res) {
+    async adicionarCliente(req ,res) {
             const body = req.body
             const novoCliente = await this.cliente.create(body)
 
             res.json(novoCliente)
     }
-    async getAll(res) {
+    async getAll(res) {  
         const litaDeClientes = await this.cliente.findAll()
-        console.log(litaDeClientes)
         res.json(litaDeClientes)
     }
     async getOne(req,res) {
-        const id = req.params.id
-        const cliente = await this.cliente.findByPk(id)
+        const buscarCpf = req.params.cpf
+        const cliente = await this.cliente.findAll({where: {
+            cpf : buscarCpf
+        }})
         res.json(cliente)
     }
 
     async editar(req,res) {
-        const id = req.params.id
+        const buscarCpf = req.params.cpf
         const body = req.body
 
-        const cliente = await this.cliente.findByPk(id)
-        cliente.cpf = body.cpf
-        cliente.nome = body.nome
-        cliente.dtNasc = body.dtNasc
-        cliente.sexo = body.sexo
-        cliente.email = body.email
-        cliente.profissao = body.profissao
-
-        await cliente.save()
-        res.json(cliente)
+        const clienteEditado = await this.cliente.update({
+            cpf : body.cpf,
+            nome : body.nome,
+            dtNasc : body.dtNasc,            
+            sexo : body.sexo,
+            email : body.email,
+            profissao : body.profissao,
+        },{
+            where: {cpf : buscarCpf}
+        }) 
+        
+        console.log(clienteEditado)
+        res.json(clienteEditado)
     }
 
     async delete(req,res) {

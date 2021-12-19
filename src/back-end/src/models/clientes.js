@@ -6,7 +6,8 @@ class Clientes extends Model {}
 
 Clientes.init({
     cpf: {
-        type: DataTypes.BIGINT
+        type: DataTypes.BIGINT,
+        unique:true
     },
     nome: {
         type: DataTypes.STRING,

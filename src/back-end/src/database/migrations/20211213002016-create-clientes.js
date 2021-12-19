@@ -9,7 +9,9 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       cpf: {
-        type: Sequelize.BIGINT
+        type: Sequelize.BIGINT,
+        unique:true,
+        allowNull:false
       },
       createdAt: {
         allowNull: false,
