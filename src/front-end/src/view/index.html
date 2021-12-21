@@ -19,7 +19,7 @@
             <input type="text" id="nome"><br>
 
             <label for="dtNasc">Data Nasc:</label>
-            <input type="date" id="dtNasc" max="2004-01-01"><br>
+            <input type="date" id="dtNasc" max="2020-01-01"><br>
 
             <label for="masculino">Masculino</label>
             <input type="radio" name="sexo" id="masculino" value="masculino">
@@ -46,10 +46,30 @@
         <input type="text" id="filtroCpf">
         <button onclick="buscar()">Buscar</button>
 
+        <div id="clientes cadastrados">
+            <h1>Clientes cadastrados</h1>
+            <table id="tabela">
+                <tr>
+                    <td>Nome</td>
+                    <td>CPF</td>
+                    <td>Data Nasc</td>
+                    <td>Sexo</td>
+                    <td>Email</td>
+                    <td>Profissão</td>
+                </tr>
+            </table>
+        </div>
 
     </div>
-    <script src="../infra/infra.js"></script>
     <script src="../model/cliente.model.js"></script>
-<script src="../controller/controller.js"></script>
+    <script src="../infra/infra.js"></script>
+    <script src="../controllers/utils/optionsFetch.js"></script> 
+    <script src="../controllers/utils/limparCampos.js"></script>  
+    <script src="../controllers/utils/retornarCliente.js"></script>  
+    <script src="../controllers/popularCampos.js"></script>  
+    <script src="../controllers/windowload.js"></script>
+    <script src="../controllers/cadastrarCliente.js"></script>
+    <script src="../controllers/editarCliente.js"></script>
+    <script src="../controllers/deletarCliente.js"></script>
 </body>
 </html>

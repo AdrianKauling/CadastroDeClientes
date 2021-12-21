@@ -40,9 +40,9 @@ class ServiceCliente {
     }
 
     async delete(req,res) {
-        const id = req.params.id
+        const cpfDeletado = req.params.cpf
         const clienteDeletado = await this.cliente.destroy({where : {
-            id: id
+            cpf: cpfDeletado
         }})
         res.json(clienteDeletado) 
     }

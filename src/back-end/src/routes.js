@@ -26,7 +26,7 @@ router.get('/cadastro/:cpf', (req,res) => {
 router.put('/cadastro/:cpf', (req,res)=> {
     serviceCliente.editar(req,res)
 })
-router.delete('/cadastro/:id', (req,res) => {
+router.delete('/cadastro/:cpf', (req,res) => {
     serviceCliente.delete(req,res)
 })
 
