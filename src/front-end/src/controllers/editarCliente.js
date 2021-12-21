@@ -12,8 +12,8 @@ function editar() {
     fetch(`http://localhost:8080/cadastro/${clienteEditado.cpf}`, options)
         .then(response => {
             response.json()
-                .then(dado => {
-                    console.log(dado)
+                .then( () => {
+                    location.reload()
                 })
         })
 
