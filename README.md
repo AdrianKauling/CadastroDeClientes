@@ -19,10 +19,9 @@ seguintes ferramentas:
 Conceitos aplicados:
 
 • Arquitetura MVC;
-• Teste automatizados (TDDs);
 • Criação de APIs (Express);
 • Conexão com DataBase (Sequelize);
 • Uso de chamadas Ajax (Fetch); 
-• Funções Assíncronas (async/await);
+• Funções Assíncronas (async/await ou then/catch);
 • Manipulação DOM;
 • Estilização de páginas HTML.

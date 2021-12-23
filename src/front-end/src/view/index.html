@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,48 +9,61 @@
     <link rel="stylesheet" href="style.css">
     <title>Cadastro de clientes</title>
 </head>
+
 <body>
-    <h1>Cadastro de clientes</h1>
-    <div class="formulario" >
-        <form action="JavaScript: cadastrar()">
-            <label for="cpf">CPF:</label>
-            <input type="text" id=cpf><br>
+        <div class="box">
+            <form action="JavaScript: cadastrar()">
+                <fieldset>
+                    <legend><strong>Fórmulario de Clientes</strong></legend>
+                    <div class="inputBox">
+                        <input type="text" autocomplete="off" name="cpf" id=cpf class="inputUser" required>
+                        <label for="cpf" class="labelAnimado">CPF</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" autocomplete="off"  name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelAnimado">Nome </label>
+                    </div>
+                    <br><br>
+                    <label for="dtNasc"><strong> Data de nascimento:</strong></label>
+                    <input type="date" name="dtNasc" id="dtNasc" max="2020-01-01" required>
+                    <br><br>
+                    <div>
+                        <p>Sexo:</p>
+                        <input type="radio" name="sexo" id="masculino" value="Masculino" class="inputUser" required>
+                        <label for="masculino" class="labelSexo">Masculino</label>
+                        <br>
+                        <input type="radio" name="sexo" id="feminino" value="Feminino" class="inputUser" required>
+                        <label for="feminino" class="labelSexo">Feminino</label>
+                        <br><br>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" autocomplete="off"  name="email" id="email" class="inputUser" required>
+                        <label for="email" class="labelAnimado">Email</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" autocomplete="off"  name="profissao" id="profissao" class="inputUser" required>
+                        <label for="profissao" class="labelAnimado">Profissão</label>
+                    </div>
+                    <br><br>
+                    <div><button type="submit" id="submit">Enviar</button></div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="boxBotoes">
+            <button onclick="editar()" id="botaoEditar">Editar</button><br>
+            <button onclick="deletar()" id="botaoDeletar">Deletar</button><br>
+        </div>
 
-            <label for="nome">Nome: </label>
-            <input type="text" id="nome"><br>
-
-            <label for="dtNasc">Data Nasc:</label>
-            <input type="date" id="dtNasc" max="2020-01-01"><br>
-
-            <label for="masculino">Masculino</label>
-            <input type="radio" name="sexo" id="masculino" value="masculino">
-
-            <label for="feminino">Feminino</label>
-            <input type="radio" name="sexo" id="feminino" value="feminino"><br>
-
-            <label for="email">Email: </label>
-            <input type="text" id="email"><br>
-
-            <label for="profissao">Profissão: </label>
-            <input type="text" id="profissao"><br>
-
-            <button type="submit">Enviar Cadastro</button>
-
-        </form>
-       
-
-        <button onclick="editar()">Editar cliente</button><br>
-        <button onclick="deletar()">Deletar cliente</button><br>
-        
-
-        <label for="filtroCpf">Filtrar por cpf:</label>
-        <input type="text" id="filtroCpf">
-        <button onclick="buscar()">Buscar</button>
-
-        <div id="clientes cadastrados">
-            <h1>Clientes cadastrados</h1>
+        <div class="boxFiltro">
+            <input type="text" id="filtroCpf">
+            <label for="filtroCpf" id="labelFiltro">Filtrar por cpf:</label>
+            <button onclick="buscar()" id="botaoBuscar">Buscar</button>           
+        </div>
+        <div id="clientes cadastrados" class="boxTable">
             <table id="tabela">
-                <tr>
+                <tr id="cabecalho">
                     <td>Nome</td>
                     <td>CPF</td>
                     <td>Data Nasc</td>
@@ -59,19 +73,21 @@
                 </tr>
             </table>
         </div>
+   
 
-    </div>
+
     <script src="../model/cliente.model.js"></script>
     <script src="../infra/infra.js"></script>
-    <script src="../controllers/utils/optionsFetch.js"></script> 
-    <script src="../controllers/utils/limparCampos.js"></script>  
-    <script src="../controllers/utils/retornarCliente.js"></script> 
-    <script src="../controllers/utils/formatartabela.js"></script> 
-    <script src="../controllers/popularCampos.js"></script>  
+    <script src="../controllers/utils/optionsFetch.js"></script>
+    <script src="../controllers/utils/limparCampos.js"></script>
+    <script src="../controllers/utils/retornarCliente.js"></script>
+    <script src="../controllers/utils/formatartabela.js"></script>
+    <script src="../controllers/popularCampos.js"></script>
     <script src="../controllers/windowload.js"></script>
     <script src="../controllers/buscarCliente.js"></script>
     <script src="../controllers/cadastrarCliente.js"></script>
     <script src="../controllers/editarCliente.js"></script>
     <script src="../controllers/deletarCliente.js"></script>
 </body>
+
 </html>

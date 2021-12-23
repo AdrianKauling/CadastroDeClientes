@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #00ff00 0%, #006600 83%)
+}
+.box {  
+    position: absolute;
+    color: #fff;
+    top:47%;
+    left:80%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+
+    padding: 15px;
+    border-radius: 15px;
+    width: 25.04%;
+}
+
+fieldset {
+    border: 3px solid green
+}
+legend{
+    border: 1px solid green;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: green;
+}
+.inputBox {
+    position: relative;
+    top:20px;
+}
+.inputUser {
+    background:none;
+    border:none;
+    border-bottom:1px solid #fff;
+    outline:none;
+    color: #fff;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px; 
+}
+
+.labelAnimado{
+    position: absolute;
+    top:0;
+    left:0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputUser:focus ~ .labelAnimado,
+.inputUser:valid ~ .labelAnimado{
+    top: -20px;
+    font-size: 12px;
+    color: green; 
+}
+
+.labelSexo {
+    position: absolute;
+}
+
+#masculino,#feminino {
+    width: 10%;
+}
+
+#dtNasc {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    outline:none;
+    font-size: 15px;
+}
+
+#submit {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color:green;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    transition: .5s;
+}
+#submit:hover {
+    font-size: 20px;
+}
+
+
+#botaoEditar,#botaoDeletar {
+    position: absolute;    
+    top: 88%;
+    padding: 15px;
+    width:140px;
+    height:50px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .5s;
+}
+
+#botaoEditar:hover, #botaoDeletar:hover{
+    font-size: 19px;
+}
+
+#botaoDeletar{
+    left: 81%;
+}
+
+#botaoEditar{
+    left:69%;
+}
+
+.boxFiltro {
+    position: absolute;
+    border: none;
+    border-radius: 10px;
+    left:2%;
+    top:50px;
+    height: 110px;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#labelFiltro {
+    color: #fff;
+    font-weight:bold;
+    font-size: 18px;
+    position: absolute;
+    top:10%;
+    left:0;
+    padding: 15px;
+}
+#filtroCpf {
+    position: relative;
+    color: #fff;
+    border: none;
+    top: 22%;
+    left: 150px;
+    outline: none;
+    font-size: 18px;
+    background: none;
+    border-bottom: 1px solid white;
+    width: 50%;
+}
+#botaoBuscar {
+    position: relative;
+    cursor: pointer;
+    top: 40%;
+    border-radius: 8px;
+    background-color: green;
+    border:none;
+    color: white;
+    width: 90%;
+    height: 30px;
+    left:5%;
+    font-weight: bold;
+    font-size: 17px;
+    transition: .5s;
+}
+#botaoBuscar:hover {
+    font-size: 21px;
+}
+
+.boxTable {
+    border-radius: 8px;
+    position: absolute;
+    top: 27%;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 8px;
+}
+
+td {
+    padding: 5px;
+}
+#cabecalho{
+   background: rgba(0, 0, 0, 0.6);
+   font-size: 16px;
+   font-weight: bold;
+}
+.registros{ 
+    background-color: green;
+    border: none;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.registros:hover{
+    font-size: 16px;
+}

@@ -3,7 +3,7 @@ function formatarTabela(element){
     const dataNascArray = element.dtNasc.split('-')
     const nascFormatado = `${dataNascArray[2]}/${dataNascArray[1]}/${dataNascArray[0]}`
     console.log(dataNascArray)
-    const botao = `<button onclick="popular(${element.cpf})">Popular</button>`
+    const botao = `<button class="registros" onclick="popular(${element.cpf})">Popular</button>`
     
     const conteudo = `<tr>
     <td>${element.nome}</td>
