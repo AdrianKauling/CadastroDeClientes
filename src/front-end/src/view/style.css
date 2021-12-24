@@ -124,7 +124,7 @@ legend{
     top:50px;
     height: 110px;
     width: 400px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 #labelFiltro {
@@ -171,6 +171,7 @@ legend{
     border-radius: 8px;
     position: absolute;
     top: 27%;
+    left: 28px;
     border: none;
     font-size: 14px;
     color: #fff;
@@ -182,7 +183,6 @@ td {
     padding: 5px;
 }
 #cabecalho{
-   background: rgba(0, 0, 0, 0.6);
    font-size: 16px;
    font-weight: bold;
 }
