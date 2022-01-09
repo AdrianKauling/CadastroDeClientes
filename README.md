@@ -1,6 +1,6 @@
 Objetivo: 
 
-O objetivo é praticar a criação de formulários HTML junto com as CSS, 
+O objetivo do projeto é praticar a criação de formulários HTML junto com as CSS, 
 armazenando os dados inseridos no banco através de uma API criada com o 
 Node JS.
 
